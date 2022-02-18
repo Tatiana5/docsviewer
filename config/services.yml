@@ -1,0 +1,20 @@
+services:
+    tatiana5.docsviewer.listener:
+        class: tatiana5\docsviewer\event\listener
+        arguments:
+            - '@config'
+            - '@request'
+            - '@controller.helper'
+        tags:
+            - { name: event.listener }
+    tatiana5.docsviewer.docs:
+        class: tatiana5\docsviewer\controller\docs
+        arguments:
+            - '@user'
+            - '@auth'
+            - '@config'
+            - '@cache'
+            - '@dbal.conn'
+            - '@request'
+            - '%core.root_path%'
+            - '%core.php_ext%'

@@ -1,0 +1,11 @@
+{% if _file.S_DOCSVIEWER_GDOCS %}
+	<div class="gdocs-iframe">
+		<iframe src="//docs.google.com/gview?url={{ _file.SRC }}&amp;module=files&amp;embedded=true" width="100%" height="500"></iframe>
+	</div>
+{% endif %}
+
+{% if _file.S_DOCSVIEWER_MSOFFICE %}
+	<div class="msoffice-iframe">
+		<iframe src="//view.officeapps.live.com/op/embed.aspx?src={{ _file.SRC }}&amp;embedded=true" width="100%" height="500"></iframe>
+	</div>
+{% endif %}
