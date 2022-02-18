@@ -1,5 +1,5 @@
 tatiana5_docsviewer:
-    path: /{mode}/{attach_id}_{seoname}.{extension}
+    path: /{mode}/{seoname}/{attach_id}.{extension}
     defaults: { _controller: tatiana5.docsviewer.docs:documents, seoname:'' }
     requirements:
         mode: documents
