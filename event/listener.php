@@ -85,7 +85,7 @@ class listener implements EventSubscriberInterface
 	private function get_gilename($attachment)
 	{
 		$seoname = strip_tags(htmlspecialchars_decode($attachment['real_filename']));
-		$seoname = substr($seoname, 0, strrpos($seoname,'.'));
+		//$seoname = substr($seoname, 0, strrpos($seoname,'.'));
 		$u_docs_url = generate_board_url(true) . $this->helper->route('tatiana5_docsviewer', array(
 				'mode'		=> 'documents',
 				'seoname'	=> $seoname,
